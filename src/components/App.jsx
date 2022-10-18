@@ -1,5 +1,3 @@
-import BusinessCard from "./BusinessCard";
-
-const App = () => <BusinessCard />;
+const App = () => <div />;
 
 export default App;

@@ -3,10 +3,9 @@ import ReactDOM from "react-dom";
 
 import App from "./components/App";
 
-import "./index.css"
+import "./styles/index.css"
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
 );
 root.render(<App />);
-// root.render(<h1>Hi</h1>);
