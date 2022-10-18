@@ -1,21 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOMClient from 'react-dom/client';
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Content from "./Content";
+import App from "./components/App";
 
-import "./index.css"
+import "./styles/index.css"
 
-
-const App = () => <div>
-    <Header />
-    <Content />
-    <Footer />
-</div>
-
-const root = ReactDOM.createRoot(
+const root = ReactDOMClient.createRoot(
     document.getElementById("root")
 );
 root.render(<App />);
-// root.render(<h1>Hi</h1>);
