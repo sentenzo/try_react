@@ -13,6 +13,97 @@ a {
     color: inherit;
 }
 
+p {
+    color: #222;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ###   nav-bar   ### */
+
+.app-container>.nav-bar {
+    height: 70px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+}
+
+.app-container>.nav-bar>img.logo {
+    width: 96px;
+    margin-left: 30px;
+    /* position: relative;
+    left: 30px;
+    top: 50%;
+    margin-top: -24px; */
+}
+
+/* ###   hero   ### */
+
+.app-container>.hero {
+    width: 100%;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+
+img.hero--pictures-set {
+    width: 600px;
+    margin: 32px auto;
+    display: block;
+}
+
+.hero--text-section {
+    padding-right: 35%;
+}
+
+h1.hero--header {
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+p.hero--text {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* ###   card   ### */
+
+.app-container>.card>.image {
+    width: 240px;
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+span.card--image--status {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 2px 12px;
+}
+
+img.card--image--img-front {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-container>.card>.info .mark img {
+    height: 14px;
+    vertical-align: baseline;
+    margin-right: 2px;
+}
+
+.app-container>.card>.info .mark span {
+    color: #918E9B;
 }
