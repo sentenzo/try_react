@@ -72,6 +72,9 @@ p.hero--text {
     display: flex;
     padding: 0 48px;
     margin-bottom: 64px;
+
+    overflow-x: hidden;
+    max-width: 720px;
 }
 
 .app-container .card {
