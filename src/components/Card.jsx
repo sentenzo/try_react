@@ -1,21 +1,21 @@
-import FrontImg from "../images/card/front.png"
+// import FrontImg from "../images/card/front.png"
 import StarIco from "../images/card/star.png"
 
-const Card = () => <div className="card">
+const Card = (props) => <div className="card">
     <div className="image">
         <span className="card--image--status">
-            Sold out
+            {props.status}
         </span>
-        <img src={FrontImg} alt="front" className="card--image--img-front" />
+        <img src={props.front_image} alt="front" className="card--image--img-front" />
     </div>
     <div className="info">
         <p className="mark">
             <img src={StarIco} alt="star" />
-            5.0 <span> (6) · USA</span>
+            {props.mark_val} <span> ({props.mark_amount}) · {props.country}</span>
         </p>
-        <p className="description">Life lessons with Katie Zaferes</p>
+        <p className="description">{props.description}</p>
         <p className="price">
-            <strong>From $136</strong> / person
+            <strong>From {props.price}</strong> / person
         </p>
     </div>
 </div>
