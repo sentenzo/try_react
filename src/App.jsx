@@ -1,11 +1,9 @@
 import Header from "./components/Header"
-import MemeInput from "./components/MemeInput"
-import OutputImage from "./components/OutputImage"
+import Meme from "./components/Meme"
 
 const App = () => <div id="react_app">
     <Header />
-    <MemeInput />
-    <OutputImage />
+    <Meme />
 </div>
 
 export default App

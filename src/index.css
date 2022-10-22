@@ -1,6 +1,7 @@
 html,
 body,
 h1,
+h2,
 p {
     margin: 0;
     padding: 0;
@@ -36,6 +37,20 @@ p {
 
 }
 
+.text-shadow {
+    color: #fff;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
 /* Header */
 
 .header {
@@ -68,19 +83,19 @@ p {
 }
 
 /* MemeInput */
-.meme-input {
+.meme {
     margin: 36px 0;
 }
 
-.meme-input form .row {
+.meme form .row {
     padding: 0 10px;
     justify-content: space-between;
     align-items: stretch;
     margin: 20px 0;
 }
 
-.meme-input form input,
-.meme-input form button {
+.meme form input,
+.meme form button {
     height: 36px;
     border-radius: 4px;
     font-size: 16px;
@@ -91,17 +106,46 @@ p {
     font-family: 'Karla', sans-serif;
 }
 
-.meme-input form input[type="text"] {
+.meme form input[type="text"] {
     border: 1px solid #D5D4D8;
     margin-left: 20px;
 }
 
-.meme-input form input[type="text"]:first-child {
+.meme form input[type="text"]:first-child {
     margin-left: inherit;
 }
 
-.meme-input form button {
+.meme form button {
     border: none;
     height: 40px;
     cursor: pointer;
+}
+
+.meme .meme-container {
+    position: relative;
+}
+
+.meme .meme-container img.image {
+    width: 100%;
+    border: 1px solid #D5D4D8;
+    border-radius: 4px;
+}
+
+.meme .meme-container .text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: 36px;
+
+    text-transform: uppercase;
+}
+
+.meme .meme-container .text.top {
+    top: 5%;
+}
+
+.meme .meme-container .text.bottom {
+    bottom: 5%;
 }
