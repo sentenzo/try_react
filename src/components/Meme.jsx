@@ -25,10 +25,10 @@ const Meme = () => {
         set_meme(obj => ({ ...obj, image_url: get_rand_url() }));
     };
 
-    const inputChanged = (name) =>
-        (event) =>
-            set_meme(
-                obj => ({ ...obj, [name]: event.target.value }))
+    const inputChanged = (event) => {
+        const { name, value } = event.target;
+        set_meme(obj => ({ ...obj, [name]: value }))
+    }
 
     return <div className="meme">
 
@@ -39,14 +39,14 @@ const Meme = () => {
                         type="text"
                         placeholder="Top row"
                         name="top_text"
-                        onChange={inputChanged("top_text")}
+                        onChange={inputChanged}
                         value={meme.top_text}
                     ></input>
                     <input
                         type="text"
                         placeholder="Bottom row"
                         name="bottom_text"
-                        onChange={inputChanged("bottom_text")}
+                        onChange={inputChanged}
                         value={meme.bottom_text}
                     ></input>
                 </div>
