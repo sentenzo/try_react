@@ -1,14 +1,29 @@
 import React from "react";
 
-import { meme_data } from "../data";
-
 
 const Meme = () => {
 
-    const [memes, set_memes] = React.useState(meme_data.data.memes);
+    const [memes, set_memes] = React.useState([]);
+
+    React.useEffect(
+        () => {
+            fetch("https://api.imgflip.com/get_memes")
+                .then(res => res.json())
+                .then(
+                    (data) => {
+                        set_memes(data.data.memes)
+                        console.log(data.data.memes[0])
+                    }
+                )
+        }
+        , []
+    );
 
     const get_rand_url = () => {
         const n = memes.length;
+        if (n === 0) {
+            return "https://i.imgflip.com/26am.jpg";
+        }
         const i = Math.floor(Math.random() * n);
         const img_url = memes[i].url;
         return img_url;
