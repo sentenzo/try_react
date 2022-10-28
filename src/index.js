@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client"
 
 import App from "./App";
 
@@ -12,7 +13,7 @@ import "./style.css"
  * - Style everything to look like the slide
  */
 
-const root = ReactDOM.createRoot(
+const root = createRoot(
     document.getElementById("root")
 );
 root.render(<App />);

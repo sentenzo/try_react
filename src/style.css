@@ -66,14 +66,12 @@ body,
 
 #react-app .gameboard {
     margin-top: 20px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(5, auto);
 }
 
-#react-app .gameboard .row {
-    display: flex;
-    /* margin-bottom: 8px; */
-}
-
-#react-app .gameboard .block {
+#react-app .gameboard .die {
     background-color: var(--color-white);
     width: 40px;
     height: 40px;
@@ -90,12 +88,16 @@ body,
     cursor: pointer;
 }
 
-#react-app .gameboard .block.lock {
+#react-app .gameboard .die.locked {
     background-color: #59E391;
 }
 
-#react-app .gameboard .block:hover {
+#react-app .gameboard .die:hover {
     background-color: #aae8bb;
+}
+
+#react-app .gameboard .die.locked:hover {
+    background-color: #4d8;
 }
 
 #react-app button {
@@ -104,8 +106,8 @@ body,
     border: none;
     color: var(--color-white);
     font-size: 20px;
-    padding: 8px 12px;
-    width: 100px;
+    padding: 8px 18px;
+    /* width: 100px; */
     cursor: pointer;
 
     display: block;
